@@ -1,0 +1,17 @@
+{
+  "name": "super-simple-html-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lexer.js",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
