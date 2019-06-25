@@ -12,20 +12,21 @@ const testHTML = `<html maaa=a >
     <body>
         <img src="a" />
     </body>
-</html>`
+</html>`;
 
 const dummySyntaxer = {
   receiveInput: (token) => {
     if (typeof token === 'string') {
-      console.log(`String(${token.replace(/\n/, '\\n').replace(/ /, '<whitespace>')})`)
-    } else {
-      console.log(token)
+      console.log(`String(${token.replace(/\n/, '\\n').replace(/ /, '<whitespace>')})`);
+    }
+    else {
+      console.log(token);
     }
   }
-}
+};
 
-const lexer = new HTMLLexicalParser(dummySyntaxer)
+const lexer = new HTMLLexicalParser(dummySyntaxer);
 
 for (let c of testHTML) {
-    lexer.receiveInput(c)
+    lexer.receiveInput(c);
 }

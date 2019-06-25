@@ -194,7 +194,7 @@ class HTMLLexicalParser {
     }
 }
 
-module.exports = {
+export {
     HTMLLexicalParser,
     StartTagToken,
     EndTagToken
