@@ -3,7 +3,7 @@
 * @author heyunfeng
 */
 
-import { HTMLLexicalParser } from './lexer';
+import {HTMLLexicalParser} from './lexer';
 
 const testHTML = `<html maaa=a >
     <head>
@@ -15,14 +15,14 @@ const testHTML = `<html maaa=a >
 </html>`;
 
 const dummySyntaxer = {
-  receiveInput: (token) => {
-    if (typeof token === 'string') {
-      console.log(`String(${token.replace(/\n/, '\\n').replace(/ /, '<whitespace>')})`);
+    receiveInput: token => {
+        if (typeof token === 'string') {
+            console.log(`String(${token.replace(/\n/, '\\n').replace(/ /, '<whitespace>')})`);
+        }
+        else {
+            console.log(token);
+        }
     }
-    else {
-      console.log(token);
-    }
-  }
 };
 
 const lexer = new HTMLLexicalParser(dummySyntaxer);

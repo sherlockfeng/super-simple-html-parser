@@ -3,7 +3,7 @@
 * @author heyunfeng
 */
 
-import { StartTagToken, EndTagToken } from './lexer.js';
+import {StartTagToken, EndTagToken} from './lexer.js';
 
 class HTMLDocument {
     constructor() {
@@ -31,7 +31,7 @@ class Element extends Node {
     }
 }
 
-class HTMLSyntaticalParser {
+export class HTMLSyntaticalParser {
     constructor() {
         this.stack = [new HTMLDocument()];
     }
@@ -75,8 +75,4 @@ class HTMLSyntaticalParser {
             return;
         }
     }
-}
-
-export {
-    HTMLSyntaticalParser
 }

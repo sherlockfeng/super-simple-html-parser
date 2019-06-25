@@ -3,13 +3,13 @@
 * @author heyunfeng
 */
 
-class StartTagToken {}
+export class StartTagToken {}
 
-class EndTagToken {}
+export class EndTagToken {}
 
 class Attribute {}
 
-class HTMLLexicalParser {
+export class HTMLLexicalParser {
 
     constructor(syntax) {
         this.syntax = syntax;
@@ -193,9 +193,3 @@ class HTMLLexicalParser {
         this.syntax.receiveInput(token);
     }
 }
-
-export {
-    HTMLLexicalParser,
-    StartTagToken,
-    EndTagToken
-};
